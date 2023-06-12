@@ -14,6 +14,7 @@ nav {
 
 .brand img {
   transition: .4s;
+  max-height: 3em;
 }
 
 .brand:hover>h2 {

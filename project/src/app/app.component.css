@@ -1,0 +1,7 @@
+main {
+  min-height: 50vh; /* Define a altura mínima como 70% da tela */
+  display: flex;
+    justify-content: center;
+  height: 80vh; 
+} 
+
