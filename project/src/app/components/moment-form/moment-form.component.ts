@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-moment-form',
@@ -7,4 +8,10 @@ import { Component, Input } from '@angular/core';
 })
 export class MomentFormComponent {
   @Input() btnText!: string;
+
+  momentForm!:FormGroup
+
+  submit() {
+    console.log("Enviando");
+  }
 }
