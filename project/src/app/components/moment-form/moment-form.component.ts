@@ -21,14 +21,18 @@ export class MomentFormComponent {
   }
 
   get title() {
-    return this.momentForm.get('title')!
+    return this.momentForm.get('title')!;
   }
 
   get image() {
-    return this.momentForm.get('image')!
+    return this.momentForm.get('image')!;
   }
 
   submit() {
+    if (this.momentForm.invalid) {
+      return;
+    }
+
     console.log('Enviando');
   }
 }
