@@ -16,7 +16,7 @@ export class MomentFormComponent {
       id: new FormControl(''),
       title: new FormControl('', [Validators.required]),
       description: new FormControl(''),
-      image: new FormControl('', [Validators.required]),
+      image: new FormControl(''),
     });
   }
 
@@ -24,8 +24,11 @@ export class MomentFormComponent {
     return this.momentForm.get('title')!;
   }
 
-  get image() {
-    return this.momentForm.get('image')!;
+  onFileSelected(event: any) {
+    
+    const file: File = event.target.files[0];
+
+    this.momentForm.patchValue({ image: file });
   }
 
   submit() {

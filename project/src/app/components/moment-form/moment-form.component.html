@@ -21,10 +21,10 @@
   </div>
   <div class="form-group">
     <label for="image">Insira a imagem que mais marcou seu momento: </label>
-    <input type="file" formControlName="image" />
+    <input type="file" formControlName="image" (change)="onFileSelected($event)"/>
   </div>
-  <div *ngIf="title.invalid && formDir.submitted" class="validation-error">
+  <!-- <div *ngIf="title.invalid && formDir.submitted" class="validation-error">
     <p *ngIf="image.errors?.['required']">É necessário inserir uma imagem</p>
-  </div>
+  </div> -->
   <input type="submit" class="sendImage" value="{{ btnText }}" />
 </form>
